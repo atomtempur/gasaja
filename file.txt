@@ -1,5 +1,23 @@
-<div style="display: none">
-<p><a style="display: none;" href="https://ombsatuduatigarival.com/"></a></p>
-<p><a style="display: none;" href="https://lumenadvisory.com/"></a></p>
-<p><a style="display: none;" href="https://campshelby.org/"></a></p>
-</div>
+  <script>
+        // Daftar kata terlarang
+        const bannedWords = ["bokep", "scam", "porn", "spam", "malware", "phishing"];
+
+        // Fungsi untuk memfilter teks
+        function isCleanContent(text) {
+            return !bannedWords.some(word => text.toLowerCase().includes(word));
+        }
+
+        // Validasi input dari user
+        function validateInput() {
+            const userInput = document.getElementById("userInput").value;
+            const result = document.getElementById("result");
+
+            if (isCleanContent(userInput)) {
+                result.textContent = "Konten aman untuk diproses.";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Konten mengandung kata terlarang. Dilarang mengirimkan!";
+                result.style.color = "red";
+            }
+        }
+    </script>
